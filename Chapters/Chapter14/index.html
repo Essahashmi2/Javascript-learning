@@ -7,8 +7,40 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Nested ifs</h2>
+    <p>This program uses two requirements to check a person's eligibility to ride the rides in an amusement park. The two requirements are that you cannot be less than 15 years old or shorter than 145cm. When you enter your age and height, the program tells you whether you can ride in the amusement park or not. If you cannot, it specifies which requirements you did not meet, age, height or both </p>
     <script>
-        
+        // The code is really messy and violates the DRY principle. This is just an example of how to use nested ifs. A more concise approach is in the chapter 13 example
+        var age = prompt("Please enter your age");
+        const ageInt = parseInt(age);
+        var height = prompt("Please enter your height in centimetres"); 
+        const heightInt = parseInt(height);
+        if (ageInt >= 15) 
+            if (heightInt >= 145) {
+                alert("Congrats, you can use the rides in this amusement park");
+            }
+            else if (height < 145) {
+                alert("Unfortunately, you are not tall enough to use the rides in this amusement park");
+            }
+            else {
+                alert ("The information you entered is not valid");
+            }
+        else if (heightInt >= 145)
+            if (ageInt >= 15) {
+            alert("Congrats, you can use the rides in this amusement park");
+            }
+            else if (ageInt < 15) {
+            alert("Unfortunately, you are not old enough to use the rides in this amusement park");
+            }
+            else {
+            alert("The information you entered is not valid");
+            }
+        else if (ageInt < 15 && heightInt < 145) {
+            alert("You are both not tall and not old enough to use these rides");
+        }
+        else {
+            alert("The information you entered is not valid")
+        }
     </script>
 </body>
 </html>
