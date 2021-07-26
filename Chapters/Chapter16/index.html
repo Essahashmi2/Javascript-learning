@@ -8,7 +8,32 @@
 </head>
 <body>
     <script>
-        
+        var animals = ["cats", "dogs", "bats", "squirrels", "horses"]
+        for (i=0;i<=4;i++) {
+            document.write(animals[i])
+            document.write("</br>")
+        }
+        for (i=1;i<=2;i++)
+            animals.pop();
+        animals.push("raccoons");
+        document.write("</br>")
+        document.write("</br>")
+        document.write("</br>")
+        function text () {
+            var haha = '';
+            for (i=0;i<=(animals.length-1);i++) {
+            haha+=animals[i] + "</br>"
+            }
+            console.log(haha)
+            return haha
+        }
+        // var textttrrr = text();
+        document.write(`After removing the last two elements of the array and adding one, array now reads: </br></br> ${text()}`)
+        // function test(){
+        //     return 'buhahahahhahahahaha'
+        // }
+        // var test = test()
     </script>
+    <!-- "After removing the last two elements of the array and adding one, the new array reads -->
 </body>
 </html>

@@ -8,7 +8,29 @@
 </head>
 <body>
     <script>
-        
+        var age = prompt("Please enter your age");
+        const ageInt = parseInt(age);
+        var height = prompt("Please enter your height in centimetres"); 
+        const heightInt = parseInt(height);
+        if (ageInt >= 15 && heightInt >= 145) {
+            alert("Congrats, you can use the rides in this amusement park");
+        }
+        else if (ageInt < 15) {
+            alert("You are not old enough to use these rides");
+        }
+        else if (heightInt < 145) {
+            alert("You are not tall enough to use these rides");
+        }
+        else if (ageInt < 15 && heightInt < 145) {
+            alert("You are both not tall and not old enough");
+        }
+        else {
+            alert("The information you entered are invalid");
+        }
+        // else if (ageInt < 15 || heightInt < 145)
+        //     if (ageInt < 15) 
+        //     alert("Unfortunately you cannot use the rides in this amusement park because you are either too young or too short or both but this program is not sophisticated enough to tell you which");
+        // else if (ageInt < 15 || heightInt < 145)
     </script>
 </body>
 </html>
