@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let numSteriks = 1;
+    let numSpaces = 4;
+    function pyramid() {
+        for (let i = 1; i<=5; i++) {
+            let string = "";
+            for (let i=0; i<=numSpaces;i++) {
+                string+="&nbsp;";
+            }
+            for (let i=0; i<numSteriks;i++) {
+                string+="*"
+            }
+            document.write(string)
+            document.write(numSpaces)
+            document.write(numSteriks)
+            document.write("<br></br>")
+            numSteriks+=2;
+            numSpaces--;
+        } 
+    }
+    let printbutton = document.createElement("button");
+    printbutton.innerHTML = "Print a pyramid pattern";
+    document.body.appendChild(printbutton);
+    printbutton.onclick = pyramid;  
+    </script>
+</body>
+</html>

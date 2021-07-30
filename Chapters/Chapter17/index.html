@@ -7,8 +7,32 @@
     <title>Document</title>
 </head>
 <body>
+    I am live!!!!!!!!!
+    <br></br>
     <script>
-        
+        var animals = ["dog", "cat", "bird"];
+        function popanimals () { 
+            var newanimals = animals.pop();
+            return newanimals
+        }
+        function printarray() {
+            return newanimals
+        }
+        let btn = document.createElement("button");
+        btn.innerHTML = "Press this button to remove the last element of the array animals";
+        document.body.appendChild(btn);
+        btn.onclick = popanimals;
+        let button = document.createElement("button");
+        button.innerHTML = "Press this button to print the array animals";
+        document.body.appendChild(button);
+        button.onclick = printarray;
     </script>
+    <!-- // if (animals.length>=1) {
+    // str+=animals
+    // }
+    // else if (animals.length<1) {
+    // str+="This is an empty array"
+    // }
+    // return str -->
 </body>
 </html>

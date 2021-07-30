@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let array = [];
+        // for (i=array.length; i<=7; i++) {
+        //     array+="*"
+        //     console.log(array)
+        // } 
+        // console.log(array[0])
+        // console.log(array.length)
+        let str = "";
+        function triangle() {
+            for (i=str.length; i<=7; i++) {
+            str+="*"
+            document.write(str)
+            document.write("<br><br/>")
+            }      
+        }
+        let print = document.createElement("button")
+        print.innerHTML = "Print a triangle pattern"
+        document.body.appendChild(print)
+        print.onclick = triangle 
+    </script>
+</html>
