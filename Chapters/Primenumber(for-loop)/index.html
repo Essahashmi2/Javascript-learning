@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function somefunction() {
+            let number = prompt("Please enter your number to check if its a prime number");
+            const intnum = parseInt(number)
+            let string;
+            let numfactors = 0
+            if (intnum == 0) {
+                string=" is neither prime nor composite"
+            } 
+            else if (intnum == 1) {
+                string=" is neither prime nor composite"
+                numfactors = 1;
+            } 
+            else if (intnum == 2) {
+                string=" is a prime number"
+                numfactors = 1;
+            }
+            else {
+                for (let i = 1; i<=intnum ; i++) {
+                    if (intnum % i == 0) {
+                        numfactors++;
+                    }
+                }
+                if (numfactors == 2) {
+                string=" is a prime number"         
+                } 
+                else if (numfactors > 2) {
+                string=" is a composite number"          
+                } 
+            }
+            console.log(`${number} ${string} because the number of factors is ${numfactors}`) 
+        }
+        let btn = document.createElement("button")
+        btn.innerHTML = "Check if a number is prime or composite"
+        document.body.appendChild(btn)
+        btn.onclick = somefunction
+    </script>
+</body>
+</html>

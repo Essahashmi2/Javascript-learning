@@ -8,76 +8,24 @@
 </head>
 <body>
     <script>
-    // function pyramid() {
-    //     for (let i = 1; i<=5; i++) {
-    //         let string = "";
-    //         const numSteriks = (i * 2) - 1
-    //         const numSpaces = (-i) + 5;
-    //         for (let i=0; i<=numSpaces;i++) {
-    //             string+="&nbsp;";
-    //         }
-    //         for (let i=0; i<numSteriks;i++) {
-    //             string+="*"
-    //         }
-    //         document.write(string)
-    //         document.write("<br></br>")
-    //     } 
-    // }
-    // let printbutton = document.createElement("button");
-    // printbutton.innerHTML = "Print a pyramid pattern";
-    // document.body.appendChild(printbutton);
-    // printbutton.onclick = pyramid;
-    
-    document.write("&nbsp;")
-    document.write("&nbsp;")
-    document.write("&nbsp;")
-    document.write("&nbsp;")
-    document.write("*")
-    document.write("&nbsp;")
-    document.write("&nbsp;")
-    document.write("&nbsp;")
-    document.write("&nbsp;")
-    document.write("<br></br>")
-    document.write("&nbsp;")
-    document.write("&nbsp;")
-    document.write("&nbsp;")
-    document.write("*")
-    document.write("*")
-    document.write("*")
-    document.write("&nbsp;")
-    document.write("&nbsp;")
-    document.write("&nbsp;")
-    document.write("<br></br>")
-    document.write("&nbsp;")
-    document.write("&nbsp;")
-    document.write("*")
-    document.write("*")
-    document.write("*")
-    document.write("*")
-    document.write("*")
-    document.write("&nbsp;")
-    document.write("&nbsp;")
-    document.write("<br></br>")
-    document.write("&nbsp;")
-    document.write("*")
-    document.write("*")
-    document.write("*")
-    document.write("*")
-    document.write("*")
-    document.write("*")
-    document.write("*")
-    document.write("&nbsp;")
-    document.write("<br></br>")
-    document.write("*")
-    document.write("*")
-    document.write("*")
-    document.write("*")
-    document.write("*")
-    document.write("*")
-    document.write("*")
-    document.write("*")
-    document.write("*")
-    document.write("<br></br>")
+        function pyramid() {
+            for (let i = 1; i<=5; i++) {
+                let string = "";
+                const numSpaces = (-i) + 5;
+                const numSteriks = (i * 2) - 1;
+                for (let i=0; i<numSpaces;i++) {
+                    string+=" ";
+                }
+                for (let i=0; i<numSteriks;i++) {
+                    string+="*"
+                }
+                console.log(string)
+            } 
+        }
+        let printbutton = document.createElement("button");
+        printbutton.innerHTML = "Print a pyramid pattern";
+        document.body.appendChild(printbutton);
+        printbutton.onclick = pyramid;
     </script>
 </body>
 </html>
