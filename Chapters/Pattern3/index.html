@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <link href="styles.css" rel="stylesheet"> -->
 </head>
 <body>
     <script>
         function pyramid() {
-            for (let i = 1; i<=5; i++) {
+            let numberOfRows = parseInt(prompt("Enter the number of rows for the pyramid")) 
+            for (let i = 1; i<=numberOfRows; i++) {
                 let string = "";
-                const numSpaces = (-i) + 5;
+                const numSpaces = (-i) + numberOfRows;
                 const numSteriks = (i * 2) - 1;
                 for (let i=0; i<numSpaces;i++) {
                     string+=" ";
@@ -20,6 +22,7 @@
                     string+="*"
                 }
                 console.log(string)
+                // document.write("<br></br>")
             } 
         }
         let printbutton = document.createElement("button");

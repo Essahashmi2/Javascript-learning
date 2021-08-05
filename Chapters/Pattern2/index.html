@@ -8,19 +8,12 @@
 </head>
 <body>
     <script>
-        // let array = [];
-        // for (i=array.length; i<=7; i++) {
-        //     array+="*"
-        //     console.log(array)
-        // } 
-        // console.log(array[0])
-        // console.log(array.length)
-        let str = "";
         function triangle() {
-            for (i=str.length; i<=7; i++) {
+            let str = "";
+            let numberOfLines = parseInt(prompt("Enter the number of lines you want in this pattern"))
+            for (i=0; i<numberOfLines; i++) {
             str+="*"
-            document.write(str)
-            document.write("<br><br/>")
+            console.log(str)
             }      
         }
         let print = document.createElement("button")
