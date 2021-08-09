@@ -16,7 +16,7 @@
             for (i=0; i<notes.length; i++) {
                 if (amount >= notes[i]) {
                     numberofnotes[i] = Math.floor(amount/notes[i])// assigning number of each notes
-                    amount = amount - (notes[i]*numberofnotes[i])// updating amount of moneyleft
+                    amount = amount - (notes[i]*numberofnotes[i])// updating amount of money left
                 }
                 else {
                     numberofnotes[i] = 0

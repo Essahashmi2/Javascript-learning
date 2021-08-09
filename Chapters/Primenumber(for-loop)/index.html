@@ -8,12 +8,12 @@
 </head>
 <body>
     <script>
-        function somefunction() {
+        function primeNumbers() {
             let number = parseInt(prompt("Please enter your number to check if its a prime number"));
             let string;
             let factors = [];
             let factorpairs = [];
-            let arrayindex = 0;
+            let index = 0;
             if (number == 0) {
                 string=" is neither prime nor composite"
             } 
@@ -24,9 +24,9 @@
             else {
                 for (let i = 1; i<=number ; i++) {
                     if (number % i == 0) {
-                        factorpairs[arrayindex] = `${i} x ${number/i}`
-                        factors[arrayindex] = i
-                        arrayindex++;
+                        factorpairs[index] = `${i} x ${number/i}`
+                        factors[index] = i
+                        index++;
                     } 
                 }
                 if (factors.length == 2) {
@@ -37,9 +37,9 @@
                 } 
             }
             console.log(`${number} ${string} and the number of factors is ${factors.length}`) 
-            for (i=0; i<factors.length; i++) {
-                console.log(factors[i])
-            }
+            factors.forEach(element => {
+                console.log(element)
+            })
             for (i=0; i<factorpairs.length/2; i++) {
                 console.log(factorpairs[i])
             }
@@ -47,7 +47,7 @@
         let btn = document.createElement("button")
         btn.innerHTML = "Check if a number is prime or composite"
         document.body.appendChild(btn)
-        btn.onclick = somefunction
+        btn.onclick = primeNumbers
     </script>
 </body>
 </html>
