@@ -1,6 +1,5 @@
 /// recursion code by very advanced programmer boi
-var number = prompt("Please enter a number");
-const intnum = parseInt(number);
+var number = parseInt(prompt("Please enter a number"));
 function recurse() {
     // function code
     recurse();
